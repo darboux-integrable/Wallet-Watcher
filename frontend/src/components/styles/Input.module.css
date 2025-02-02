@@ -1,0 +1,46 @@
+.wrapper{
+    position: relative;
+    margin-top: 10px;
+    background-color: blue;
+    background-color: white;
+    height: 40px;
+    display: flex;
+    border: 1px solid black;
+    font-family: var(--text-font-1);
+    border-radius: 2px;
+}
+
+.titleWrapper{
+    position: absolute;
+    left: 10px;
+    top: calc(50%);
+    transform: translateY(-50%);
+    transition: all 100ms linear;
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    margin: 0;
+    padding: 0;
+}
+.input{
+    flex-grow: 1;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.input:focus ~ .titleWrapper{
+    font-size: 0.8rem;
+    top: 0px;
+    left: 20px;
+}
+
+.input:not(:focus):not([value = ""]) ~ .titleWrapper{
+    opacity: 0;
+}

@@ -1,0 +1,97 @@
+.pageContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.wrapper{
+    min-width: 400px;
+    max-width: 600px;
+    box-shadow: 0px 0px 10px 5px var(--shadow-color-1);
+    padding-inline: 20px;
+    padding-bottom: 20px;
+    transition: all 150ms ease;
+    border-radius: 5px;
+}
+
+.title{
+    font-family: var(--title-font-1);
+    text-align: center;
+}
+
+.inputsWrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.inputsWrapper > * {
+    flex-grow: 1;
+}
+
+.allInputs{
+    padding-bottom: 10px;
+}
+
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doneButton{
+    background-color: var(--background-color-2);
+    color: var(--text-color-1);
+    height: 40px;
+    width: 120px;
+    font-size: 1.2rem;
+    font-family: var(--text-font-1);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 250ms ease-out;
+}
+
+.doneButton:hover{
+    background-color: transparent;
+    border-color: var(--background-color-2);
+    color: var(--background-color-2);
+    scale: 1.05;
+}
+
+.togglePagesWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-family: var(--text-font-1);
+}
+
+.togglePageButton{
+    height: min-content;
+    border: none;
+    background-color: white;
+    background-image: linear-gradient(var(--background-color-2), var(--background-color-2));
+    background-repeat: no-repeat;
+    background-size: 0 3px;
+    background-position-y: 100%;
+    color: var(--background-color-2);
+    font-size: 1.1rem;
+    font-family: var(--text-font-1);
+    cursor: pointer;
+    transition: all 150ms linear;
+}
+
+.togglePageButton:hover{
+    background-size: 100% 3px;
+}
+
+.errorText{
+    color: red;
+    text-align: center;
+    font-family: var(--text-font-1);
+    margin: 0;
+}

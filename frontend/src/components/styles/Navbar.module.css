@@ -1,0 +1,110 @@
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+
+    /* !!! Potentially change later for theme !!! */
+    background-color: rgba(0,0,0, 0.85);
+
+    border-bottom: 2px solid rgb(100, 100, 100);
+    
+    backdrop-filter: blur(10px);
+}
+
+/* Aligning nav content: left & right & center*/
+.navLeft {
+    padding-left: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.navRight {
+    flex-grow: 1;
+
+    padding-right: 150px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Left side of Nav*/
+.navLogo {
+    width: 35px;
+    margin-right: 5px;
+}
+.navTitle {
+    color: white;
+}
+
+/* All Buttons */
+.navRight > button {
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+/* About & Guide Button */
+.navUnderlineButton {
+    background-size: 0px 3px;
+    background-image: linear-gradient(var(--dark-border-color-1), var(--dark-border-color-1));
+    background-position-y: 27px;
+    transition: background-size 250ms;
+}
+.navUnderlineButton:hover {
+    background-size: 100% 3px;
+}
+
+/* Login Button */
+.navLoginButton {
+    height: 35px;
+    position: relative;
+    padding-inline: 24px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--background-color-4), var(--background-color-4)) 0% 0% / 0% 0% no-repeat;
+    transition: background-size 150ms linear;
+    z-index: 2;
+}
+
+.navLoginButton:hover {
+    background-size: 100% 100%;
+}
+
+.navLoginButton::before,
+.navLoginButton::after {
+    content: "";
+    position: absolute;
+    border-radius: 8px;
+}
+
+.navLoginButton::before {
+    rotate: 180deg;
+    z-index: -2;
+    background: linear-gradient(90deg, var(--background-color-4), var(--background-color-4)) 0% 0% / 0% 0% no-repeat;
+    transition: inherit;
+    inset: 0;
+}
+
+.navLoginButton:hover::before {
+    background-size: 100% 100%;
+}
+
+.navLoginButton::after {
+    z-index: -1;
+    background-color: var(--background-color-2);
+    inset: 5% 3%;
+    border-radius: 6px;
+}
+
+.navTheme {
+    width: 18px;
+
+    border-radius: 8px;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgb(229, 231, 235);
+}
