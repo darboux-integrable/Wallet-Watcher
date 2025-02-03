@@ -19,9 +19,10 @@ export default function Navbar(props) {
 
     <nav className={styles.navbar} style={{"position": props.position}}>
       <div className={styles.navLeft}>
-          <img src={logo} alt="Logo" className={styles.navLogo} />
-          <h1 className={styles.navTitle}>Wallet Watcher</h1>
-        
+          <div className={styles.navTitleWrapper} onClick={() => routeTo("")}>
+            <img src={logo} alt="Logo" className={styles.navLogo} />
+            <h1 className={styles.navTitle}>Wallet Watcher</h1>
+          </div>
       </div>
 
       <div className={styles.navRight}>

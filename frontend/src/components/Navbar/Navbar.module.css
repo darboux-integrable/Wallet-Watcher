@@ -19,6 +19,12 @@
     justify-content: left;
     align-items: center;
 }
+.navTitleWrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+}
 .navRight {
     flex-grow: 1;
 
