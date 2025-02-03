@@ -3,8 +3,8 @@ import styles from './App.module.css';
 import { Route, Router } from '@solidjs/router';
 import { createSignal } from 'solid-js';
 import { render } from 'solid-js/web';
-import LandingPage from './components/js/LandingPage';
-import LoginAndSignUp from './components/js/LoginAndSignUp';
+import LandingPage from './pages/LandingPage/LandingPage';
+import LoginAndSignUp from './pages/LoginAndSignUp/LoginAndSignUp';
 
 function App() {
   const [user, setUser] = createSignal();

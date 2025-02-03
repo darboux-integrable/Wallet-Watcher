@@ -1,7 +1,8 @@
 .navbar {
     width: 100%;
-    height: 60px;
+    height: 80px;
     display: flex;
+    position: fixed;
 
     /* !!! Potentially change later for theme !!! */
     background-color: rgba(0,0,0, 0.85);
@@ -30,16 +31,20 @@
 
 /* Left side of Nav*/
 .navLogo {
-    width: 35px;
+    width: 50px;
     margin-right: 5px;
 }
 .navTitle {
+    font-size:32px;
     color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* All Buttons */
 .navRight > button {
-    height: 35px;
+    font-size: 20px;
+
+    height: 40px;
     border: none;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -50,9 +55,11 @@
 
 /* About & Guide Button */
 .navUnderlineButton {
+    margin-inline: 10px;
+
     background-size: 0px 3px;
     background-image: linear-gradient(var(--dark-border-color-1), var(--dark-border-color-1));
-    background-position-y: 27px;
+    background-position-y: 36px;
     transition: background-size 250ms;
 }
 .navUnderlineButton:hover {
@@ -61,9 +68,8 @@
 
 /* Login Button */
 .navLoginButton {
-    height: 35px;
     position: relative;
-    padding-inline: 24px;
+    padding-inline: 26px;
     border-radius: 8px;
     background: linear-gradient(90deg, var(--background-color-4), var(--background-color-4)) 0% 0% / 0% 0% no-repeat;
     transition: background-size 150ms linear;
@@ -96,10 +102,11 @@
 .navLoginButton::after {
     z-index: -1;
     background-color: var(--background-color-2);
-    inset: 5% 3%;
+    inset: 4% 2%;
     border-radius: 6px;
 }
 
+/* Theme Changer */
 .navTheme {
     width: 18px;
 
@@ -107,4 +114,11 @@
     padding: 3px;
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgb(229, 231, 235);
+    transition: box-shadow 100ms ease-in-out;
+    
+    box-shadow: 0 0 0 0;
+
+}
+.navTheme:hover {
+    box-shadow: 0 0 10px 2px rgb(255, 255, 255, 0.2);
 }

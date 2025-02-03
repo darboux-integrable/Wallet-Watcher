@@ -1,5 +1,5 @@
-import styles from "../styles/Navbar.module.css";
-import logo from "../../assets/icon.svg";
+import styles from "./Navbar.module.css";
+import logo from "../../assets/Icon.svg";
 import sun from "../../assets/images/sun.svg";
 import moon from "../../assets/images/moon.svg";
 
@@ -16,7 +16,8 @@ export default function Navbar(props) {
   const [image, setImage] = createSignal(sun);
 
   return (
-    <nav className={styles.navbar}>
+
+    <nav className={styles.navbar} style={{"position": props.position}}>
       <div className={styles.navLeft}>
           <img src={logo} alt="Logo" className={styles.navLogo} />
           <h1 className={styles.navTitle}>Wallet Watcher</h1>
@@ -42,6 +43,7 @@ export default function Navbar(props) {
              * Notification Bell
              * User Image
              * User Icon
+             * 
              * 
              */}
             <h1>Hello</h1>

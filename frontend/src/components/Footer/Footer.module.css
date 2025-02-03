@@ -1,0 +1,70 @@
+.footer {
+    width: 100%;
+    height: 140px;
+
+    display: flex;
+    justify-content: center;
+    
+    background-color: rgba(0,0,0, 0.85);
+}
+.footerCenter {
+    margin-top: auto;
+    margin-bottom: auto;   
+}
+
+/* Licence Text */
+.footerLicence {
+    margin-top: 0;
+    color: white;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Git Links Container */
+.footerGitLinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    height: 32px;
+}
+.footerGitLink {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+}
+.footerGitLink:hover {
+    cursor: pointer;
+}
+
+.footerGitLink:hover > img{
+    rotate: 0deg;
+    transition: rotate 500ms;
+}
+.footerGitLink:hover > img{
+    rotate: 360deg;
+}
+.footerGitLink:hover > h1{
+    animation: jump 500ms ease-in-out;
+}
+@keyframes jump {
+    25% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+    50% { transform: translateY(-8px); }
+    100% { transform: rotate(0deg); }
+}
+
+.footerGitLink > h1 {
+    
+    color: white;
+    font-size: 13.5px;    
+}
+.footerGitIcon {
+
+}
+
+.footerGitSeparator {
+    color: white;
+    margin: 0;
+    margin-top: -5px;
+}
