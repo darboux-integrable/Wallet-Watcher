@@ -28,13 +28,6 @@ body {
     overflow-x: hidden;
 }
 
-.footerWrapper{
-    flex-grow: 1;
-    display: flex;
-    align-items: flex-end;
-}
-
-
 /*
     Section 1 | "Title" 
 */
@@ -75,7 +68,7 @@ body {
         transform: translateY(-50%);
     }
     to {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -96,6 +89,13 @@ body {
     animation: slide-down 750ms forwards;
     animation-delay: 750ms;
     opacity: 0;
+
+    transition: box-shadow 300ms ease-in;
+    box-shadow: 0 0 10px 2px transparent;
+
+}
+.landingSection1Left > button:hover {
+    box-shadow: 0 0 10px 2px rgb(255, 255, 255, 0.2);
 }
 
 .landingSection1Right {
@@ -131,5 +131,57 @@ body {
 }
 
 /*
-    Section 2 | "Title" 
+    LandingNav
 */
+.landingNavWrapper {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+/*
+    All sections
+*/
+.landingSection {
+    margin-top: 100px;
+    display: flex;
+    height: 600px;
+}
+
+/*
+    Section 2 | "Income" 
+*/
+.landingSection2 {
+    background: linear-gradient(45deg, rgb(30, 150, 134),rgb(73, 212, 110));
+}
+
+/*
+    Section 3 | "Expenses" 
+*/
+.landingSection3 {
+    background: linear-gradient(225deg, rgb(232, 64, 64),rgb(249, 146, 86));
+}
+
+/*
+    Section 4 | "Budgeting" 
+*/
+.landingSection4 {
+    background: linear-gradient(45deg, rgb(192, 183, 55),rgb(255, 217, 151));
+}
+
+/*
+    Section 5 | "Visualizing" 
+*/
+.landingSection5 {
+    background: linear-gradient(225deg, rgb(146, 55, 192),rgb(252, 151, 255));
+}
+
+/*
+    Footer
+*/
+.footerWrapper{
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}

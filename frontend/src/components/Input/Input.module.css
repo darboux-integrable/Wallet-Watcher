@@ -42,5 +42,7 @@
 }
 
 .input:not(:focus):not([value = ""]) ~ .titleWrapper{
-    opacity: 0;
+    font-size: 0.8rem;
+    top: 0px;
+    left: 20px;
 }

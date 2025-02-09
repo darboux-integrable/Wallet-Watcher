@@ -1,7 +1,8 @@
 import styles from "./LandingPage.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer"
-import LandingChart from "./landingChart";
+import LandingChart from "./LandingChart";
+import LandingNav from "../../components/LandingNav/LandingNav";
 
 export default function LandingPage() {
   return (
@@ -9,6 +10,7 @@ export default function LandingPage() {
     <Navbar position="sticky"></Navbar>
 
     {/** Page Content */}
+    {/** Section 1 */}
     <div className={styles.landingSection1}>
       <div className={styles.landingSection1Left}>
         <h1>The Financial</h1>
@@ -22,6 +24,43 @@ export default function LandingPage() {
           <LandingChart></LandingChart>
         </div>
       </div>
+    </div>
+
+    {/** Landing Nav */}
+    <div className={styles.landingNavWrapper}>
+      <LandingNav></LandingNav>
+    </div>
+
+    {/** Section 2 */}
+    <div classList={{ 
+      [styles.landingSection2]: true, 
+      [styles.landingSection]: true 
+    }}>
+
+    </div>
+
+    {/** Section 3 */}
+    <div classList={{ 
+      [styles.landingSection3]: true, 
+      [styles.landingSection]: true 
+    }}>
+      
+    </div>
+
+    {/** Section 4 */}
+    <div classList={{ 
+      [styles.landingSection4]: true, 
+      [styles.landingSection]: true 
+    }}>
+      
+    </div>
+
+    {/** Section 5 */}
+    <div classList={{ 
+      [styles.landingSection5]: true, 
+      [styles.landingSection]: true 
+    }}>      
+    
     </div>
 
     <div className={styles.footerWrapper}>

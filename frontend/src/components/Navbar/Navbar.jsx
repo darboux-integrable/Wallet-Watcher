@@ -45,7 +45,6 @@ export default function Navbar(props) {
              * User Image
              * User Icon
              * 
-             * 
              */}
             <h1>Hello</h1>
         </Show>

@@ -21,7 +21,8 @@ export default function LoginAndSignUp({ pageType, setUser }) {
       return;
     }
 
-    const loginFetch = await fetch(`http://127.0.0.1:5000/users/`, {
+    // Adam's code is shit
+    const signInFetch = await fetch(`http://127.0.0.1:5000/users/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,9 +36,9 @@ export default function LoginAndSignUp({ pageType, setUser }) {
       }),
     });
 
-    const userData = await loginFetch.json();
+    const userData = await signInFetch.json();
 
-    if (loginFetch.ok) {
+    if (signInFetch.ok) {
       setUser(userData);
     } else {
       setError(userData.detail);

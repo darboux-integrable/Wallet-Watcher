@@ -3,44 +3,8 @@ import { onCleanup, onMount } from "solid-js";
 
 
 export default function LandingChart() {
-    
-    /*const chart = new Chart(chart, {
-        type: 'line',
-        data: {
-            datasets: [
-                {
-                    label: 'Account 1',
-                    data: [0, 2]
-                },
-                {
-                    label: 'Account 2',
-                    data: [0, 2]
-                },
-                {
-                    label: 'Account 3',
-                    data: [0, 2]
-                }
-            ]
-        },
-        options: {
-            animation: {
-                duration: 500,
-                easing: 'easeOutElastic'
-            },
-            scales: { // Disables axes
-                y: {
-                    min: 0,
-                    max: 100,
-                    title: {
-                        display: true,  // Enable the y-axis title
-                        text: 'Balance' // Set the label text
-                    }
-                }
-            }
-        }
-    });*/
-    
     let canvasElem;
+    let tension = 0.25;
     onMount(() => {
         const chart = new Chart(canvasElem, {
             type: 'line',
@@ -50,26 +14,22 @@ export default function LandingChart() {
                     {
                         label: 'Account 1',
                         data: [0],
-                        tension: 0.5
+                        tension: tension
                     },
                     {
                         label: 'Account 2',
                         data: [0],
-                        tension: 0.5
+                        tension: tension
                     },
                     {
                         label: 'Account 3',
                         data: [0],
-                        tension: 0.5
+                        tension: tension
                     },
                     
                 ]           
             },
             options: {
-                /*animation: {
-                    duration: 500,
-                    easing: 'easeOutElastic'
-                },*/
                 scales: {
                     x: {
                         
@@ -87,52 +47,52 @@ export default function LandingChart() {
         });
 
         // Initialize first datapoints
-        for(let i = 0; i < 4; i++){
-            //newDataPoints();
-            chart.data.datasets.forEach((dataset) => {
-                dataset.data.push(dataset.data[dataset.data.length-1]+(Math.floor(Math.random() * 75)-35)); // Random datapoint for each line
-                if(dataset.data[dataset.data.length-1] > 100) {
-                    dataset.data[dataset.data.length-1] = 100;
+        chart.data.datasets.forEach((dataset) => { 
+            for(let i = 0; i < 4; i++){
+
+                let lastIndex = dataset.data.length-1;
+                // Random modified for upwards trend
+                let newNum = dataset.data[lastIndex] + (Math.floor(Math.random() * 71)-25);
+
+                if(newNum > 100) {
+                    newNum = 100;
                 }
-                if(dataset.data[dataset.data.length-1] < 0) {
-                    dataset.data[dataset.data.length-1] = 0;
+                if(newNum < 0) {
+                    newNum = 0;
                 }
-            });
-        }
+                dataset.data.push(newNum);
+            }
+        });
         chart.update();
 
-        
         // Adding new values
-        function newDataPoints() {            
+        function newDataPoints() {      
             chart.data.datasets.forEach((dataset) => { 
-                let lengthOfData = dataset.data.length;
-                
-                for(let i = 0; i < lengthOfData - 1; i++) {
-                    dataset.data[i] = dataset.data[i+1];                    
-                }
+                let lastIndex = dataset.data.length-1;
+                let newNum = dataset.data[lastIndex] + (Math.floor(Math.random() * 51)-25);
+                dataset.data = dataset.data.slice(1);
 
-                dataset.data[lengthOfData-1] = dataset.data[dataset.data.length-1] + (Math.floor(Math.random() * 50)-25);
-                
-                if(dataset.data[dataset.data.length-1] > 100) {
-                    dataset.data[dataset.data.length-1] = 100;
+                if(newNum > 100) {
+                    newNum = 100;
                 }
-                if(dataset.data[dataset.data.length-1] < 0) {
-                    dataset.data[dataset.data.length-1] = 0;
+                if(newNum < 0) {
+                    newNum = 0;
                 }
+                dataset.data.push(newNum);
             });
-            chart.update(); // Push updates to chart
+            chart.update();
         }
+
         
         // Add new data points every 1.75 seconds
         setInterval(newDataPoints, 2000);
     });
 
     return (
-    <canvas 
-        ref={canvasElem} 
-        width={600} 
-        height={400} 
-        style="border-radius: 10px;"
-    />
+        <canvas 
+            ref={canvasElem} 
+            width={600} 
+            height={400} 
+        />
     );
 }

@@ -1,0 +1,57 @@
+.landingNav {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 800px;
+    padding: 15px;
+    border-radius: 15px;
+
+    text-align: right;
+    border: 2px solid;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    background-color: var(--background-color-4);
+    opacity: 0.6;
+
+}
+.navElement {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    height: 30px;
+}
+.elementIcon {
+    width: 30px;
+    height: 30px;
+}
+.elementTitle {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    text-align: left;
+    font-size: 26px;
+
+    transition: transform 75ms linear;
+}
+.elementSubtitle {
+    margin: 0;
+}
+.navElement:hover > .textBox > .elementTitle {
+    transform: translateY(-10px);
+}
+.elementSubtitle {
+    margin-left: 10px;
+    text-align: left;
+    font-size: 16px;
+
+    opacity: 0;
+    transition: all 100ms linear;
+
+}
+.navElement:hover > .textBox > .elementSubtitle {
+    transform: translateY(-10px);
+    opacity: 1;
+}
