@@ -7,7 +7,7 @@ import LandingNav from "../../components/LandingNav/LandingNav";
 export default function LandingPage() {
   return (
   <div className={styles.landingPage}>
-    <Navbar position="sticky"></Navbar>
+    <Navbar position="fixed"></Navbar>
 
     {/** Page Content */}
     {/** Section 1 */}

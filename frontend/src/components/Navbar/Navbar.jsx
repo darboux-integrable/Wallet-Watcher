@@ -2,18 +2,22 @@ import styles from "./Navbar.module.css";
 import logo from "../../assets/Icon.svg";
 import sun from "../../assets/images/sun.svg";
 import moon from "../../assets/images/moon.svg";
+import profilePic from "../../assets/images/adampfp.webp";
+import notificationBell from "../../assets/images/notifications.svg"
 
-import { createSignal } from "solid-js";
-
-import { Show } from "solid-js";
+import { createSignal, Show} from "solid-js";
 
 export default function Navbar(props) {
+  let unreadNotifs = 0;
+  
   function routeTo(page) {
-    // TODO Adam create routing for pages
     location.replace(`/${page}`);
   }
 
   const [image, setImage] = createSignal(sun);
+
+  let notificationsContainer;
+  
 
   return (
 
@@ -40,13 +44,24 @@ export default function Navbar(props) {
           </button>
         </Show>
         <Show when={props.loggedIn}>
-            {/**
-             * Notification Bell
-             * User Image
-             * User Icon
-             * 
-             */}
-            <h1>Hello</h1>
+
+          {/** Adam fix, pull notifications, pfp name, pfp image from db and set */}
+          <div className={styles.profileNotificationsWrapper}>
+            
+            <Show when={100 > unreadNotifs && unreadNotifs > 0}>
+              <p>{unreadNotifs}</p>
+            </Show>
+            <Show when={unreadNotifs > 99}>
+              <p>!</p>
+            </Show>
+            
+            
+            <img className={styles.profileNotifications} src={notificationBell} />
+            
+          </div>
+
+            <h2 className={styles.profileName}>Profile Name</h2>
+            <img className={styles.profilePic} src={profilePic} />
         </Show>
         <img onclick={() => {
             let newImage = image() == sun ? moon : sun;

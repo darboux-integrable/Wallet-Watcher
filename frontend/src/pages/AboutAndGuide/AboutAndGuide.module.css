@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+LA:wght@100..400&display=swap');
+
 .pageContent{
     display: flex;
     flex-direction: column;
@@ -14,46 +16,113 @@
 }
 .pageBox {  
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
 }
 .sideNav {      
     height: 100%;
-    rotate: 270deg;
-    margin-right: -80px; /* Jank */
     margin-top: 80px;
     box-shadow: 0 0px 6px 5px var(--shadow-color-1);
     border-radius: 15px 15px 0px 0px;
+    z-index: 0;
+    align-self: flex-start;
+    background-color: #262626;
 } 
 .sideNav::before {      
     content: "";
     position: absolute;
-    background: white;
     height: 10px;
     width: 100%;
-    bottom: -10px;
+    background-color: white;
+    max-width: 220px;
+    margin-top: 40px;
 }   
-    
+
+/*     background-color: #262626; */
+.sideNav > button:hover {
+    background-color: #000;
+}
+.selectedNav {
+    background-color: #000;
+}
+.notSelectedNav {
+    background-color: transparent;
+}
+.sideNav:has(.notSelectedNav:hover) .selectedNav {
+    background-color: transparent;
+}
+
+
 .sideNav > button {
+    margin: 0;
     height: 40px;
     width: 100px;
-    background-color: rgb(255, 255, 255);
+    color: white;
     border: none;
 }
 .sideNav > button:first-child {
-    border-top-left-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;    
+
 }
 .sideNav > button:last-child {
-    border-top-right-radius: 10px;    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;        
 }   
 
 .contentWrapper {
-    background-color: white;
+    z-index: -1;
     width: 600px;
     height: 600px;
     border-radius: 0px 15px 15px 15px;
 
     box-shadow: 0px 0px 10px 5px var(--shadow-color-1);
-    padding-inline: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
+
+}
+
+.contentTitle {
+    text-align: center;
+    font-family: "Playwrite DE LA", serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 40px;
+    margin: 10px;
+}
+
+/* About CSS */
+.aboutImageFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+.aboutImageContent {
+    border-radius: 10px;
+
+    width: 150px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px var(--shadow-color-1);
+
+}
+.selfImages {
+    width: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.belowImageBox {
+    text-align: center;
+}
+.belowImageBox > h2 {
+    margin: 0;
+    
+}
+.belowImageBox > h3 {
+    margin: 0;
+}
+.aboutDescription {
+    text-indent: 20px;
+    font-size: 1.2em;
 }
