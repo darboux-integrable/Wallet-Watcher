@@ -147,13 +147,10 @@ body {
 .landingSection {
     margin-top: 100px;
     display: flex;
-    height: 800px;
-    gap: 220px;
 }
 .landingSection > .sectionLeft {
     width: 50%;
     display: flex;
-    height: 800px;
     
     align-items: center;
     justify-content: right;
@@ -162,7 +159,6 @@ body {
     width: 50%;
     display: flex;
     align-items: center;
-    height: 800px;
     justify-content: left;
 }
 .whiteBox {
@@ -181,7 +177,39 @@ body {
     Section 2 | "Income" 
 */
 .landingSection2 {
-    background: linear-gradient(45deg, rgb(30, 150, 134),rgb(73, 212, 110));
+    /* background: linear-gradient(45deg, rgb(30, 150, 134),rgb(73, 212, 110)); */
+}
+
+.landingSection2 > .sectionRight{
+    padding-inline: 30px;
+    padding-right: 150px;
+}
+
+.landingSection2 > .sectionLeft{
+    display: block;
+}
+
+.sectionLeft{
+    padding-left: 150px !important;
+}
+
+.invertedTitle{
+    background-color: black;
+    color: white;
+    font-family: var(--title-font-1);
+    text-align: center;
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 2.7rem;
+}
+
+.incomesText{
+    font-family: var(--text-font-1);
+    max-width: 60ch;
+    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 1.1rem;
 }
 
 /*
