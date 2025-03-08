@@ -58,12 +58,17 @@ export default function AboutAndGuide(props) {
                                         </div>
                                     </div>
                                 </div>
-
+                                <h3 className={styles.aboutParagraphHeading}>
+                                    Us Two:
+                                </h3>
                                 <p className={styles.aboutDescription}>
-                                    We're two highschool juniors who have a passion in the world of computer science. With this project, we wanted to take our knowledge of programming above and beyond. Therefore, we used SolidJS as our frontend, and FastAPI as our backend.
+                                    We're two highschool juniors who have a passion for computer science. With this project, we wanted to take our knowledge of programming above and beyond. Therefore, we learned and used SolidJS as our frontend framework, and FastAPI as our backend.
                                 </p>
+                                <h3 className={styles.aboutParagraphHeading}>                
+                                    Wallet Watcher:
+                                </h3>
                                 <p className={styles.aboutDescription}>
-                                    This project was made for our Intern Computer Science / Business class as our 1st quarter project. This specific instance of this project is a remake of the project to look more professional.
+                                    Wallet Watcher is a project for the 1st quarter of our Intern Computer Science / Business class. This sspecific instance of the project is a remake of the original project to write cleaner code, and to improve the design.
                                 </p>
                             </div>
                         </Show>

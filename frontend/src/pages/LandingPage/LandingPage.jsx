@@ -37,6 +37,22 @@ export default function LandingPage() {
       [styles.landingSection]: true 
     }}>
 
+      <div className={styles.sectionLeft}>
+        Hello
+      </div>
+
+      <div className={styles.sectionRight}>
+        <div className={styles.whiteBox}>
+          <h1>
+            Content:
+          </h1>
+          <p>
+            Hello
+          </p>
+        </div>
+      </div>
+
+
     </div>
 
     {/** Section 3 */}
@@ -44,7 +60,20 @@ export default function LandingPage() {
       [styles.landingSection3]: true, 
       [styles.landingSection]: true 
     }}>
-      
+      <div className={styles.sectionLeft}>
+        <div className={styles.whiteBox}>
+            <h1>
+              Content:
+            </h1>
+            <p>
+              Hello
+            </p>
+          </div>
+        </div>
+
+      <div className={styles.sectionRight}>
+        Hello
+      </div>
     </div>
 
     {/** Section 4 */}
@@ -52,7 +81,39 @@ export default function LandingPage() {
       [styles.landingSection4]: true, 
       [styles.landingSection]: true 
     }}>
-      
+
+      <div className={styles.sectionLeft}>
+        <div className={styles.section4DroppingPanels}>
+          <div className={styles.dropPanel}>
+            <div>
+              <li>Hello</li>
+            </div>
+          </div>
+          <div className={styles.dropPanel}>
+            <div>
+              <li>Hello</li>
+            </div>
+          </div>
+          <div className={styles.dropPanel}>
+            <div>
+              <li>Hello</li>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div className={styles.sectionRight}>
+        <div className={styles.whiteBox}>
+          <h1>
+            Content:
+          </h1>
+          <p>
+            Hello
+          </p>
+        </div>
+      </div>
+
     </div>
 
     {/** Section 5 */}
@@ -60,7 +121,20 @@ export default function LandingPage() {
       [styles.landingSection5]: true, 
       [styles.landingSection]: true 
     }}>      
-    
+      <div className={styles.sectionLeft}>
+        <div className={styles.whiteBox}>
+            <h1>
+              Content:
+            </h1>
+            <p>
+              Hello
+            </p>
+          </div>
+        </div>
+
+      <div className={styles.sectionRight}>
+        Hello
+      </div>
     </div>
 
     <div className={styles.footerWrapper}>

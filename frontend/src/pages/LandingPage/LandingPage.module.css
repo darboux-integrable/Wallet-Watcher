@@ -147,7 +147,34 @@ body {
 .landingSection {
     margin-top: 100px;
     display: flex;
+    height: 800px;
+    gap: 220px;
+}
+.landingSection > .sectionLeft {
+    width: 50%;
+    display: flex;
+    height: 800px;
+    
+    align-items: center;
+    justify-content: right;
+}
+.landingSection > .sectionRight {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    height: 800px;
+    justify-content: left;
+}
+.whiteBox {
+    background-color: white;
+    width: 500px;
     height: 600px;
+    border-radius: 16px;
+    padding: 10px;
+}
+.whiteBox > h1 {
+    background-color: red;
+    text-align: center;
 }
 
 /*
@@ -160,6 +187,7 @@ body {
 /*
     Section 3 | "Expenses" 
 */
+
 .landingSection3 {
     background: linear-gradient(225deg, rgb(232, 64, 64),rgb(249, 146, 86));
 }
@@ -169,6 +197,25 @@ body {
 */
 .landingSection4 {
     background: linear-gradient(45deg, rgb(192, 183, 55),rgb(255, 217, 151));
+}
+.section4DroppingPanels {
+    background-color: red;
+    width: 500px;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.dropPanel {
+    background-color: green;
+    flex-grow: 1;
+}
+.dropPanel > div {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       
 }
 
 /*

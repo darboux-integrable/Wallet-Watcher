@@ -122,7 +122,11 @@
 .belowImageBox > h3 {
     margin: 0;
 }
+.aboutParagraphHeading {
+    margin-bottom: 2px;
+}
 .aboutDescription {
+    margin-top: 0px;
     text-indent: 20px;
     font-size: 1.2em;
 }
