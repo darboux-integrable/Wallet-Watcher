@@ -1,0 +1,44 @@
+.dropPanel{
+    width: 400px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+    border-top-left-radius: 0px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(from 90deg, var(--background-color-2), white);
+    background-repeat: no-repeat;
+}
+
+.topSection{
+    --height: 30px;
+    background-color: var(--background-color-2);
+    width: 50%;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: var(--height);
+    top: calc(-1 * var(--height));
+    color: white;
+    font-family: var(--text-font-1);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.title{
+    margin: 0;
+}
+.bottomSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    margin: 0;
+
+}

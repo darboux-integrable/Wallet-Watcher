@@ -6,6 +6,7 @@ import LandingNav from "../../components/LandingNav/LandingNav";
 import DataTable from "../../components/DataTable/DataTable";
 import upIcon from "../../assets/images/up.svg";
 import ExampleChart from "./ExampleChart";
+    import Budget from "../../components/Budget/Budget";
 
 export default function LandingPage() {
   let dataIncomes = [
@@ -183,21 +184,9 @@ export default function LandingPage() {
         <div className={styles.sectionRight}>
             
           <div className={styles.section4DroppingPanels}>
-              <div className={styles.dropPanel}>
-                <div>
-                  Placeholder, will include days till due, reason, & dollar amount
-                </div>
-              </div>
-              <div className={styles.dropPanel}>
-                <div>
-                  Placeholder
-                </div>
-              </div>
-              <div className={styles.dropPanel}>
-                <div>
-                  Placeholder
-                </div>
-              </div>
+              <Budget title={"New Toyota 4Runner"} data={"$24,000 by 3/31"} />
+              <Budget title={"New House"} data={"$200,000 by 9/21"} />
+              <Budget title={"Birthday Party"} data={"$1,000 by 4/15"} />
             </div>
         </div>
       </div>
