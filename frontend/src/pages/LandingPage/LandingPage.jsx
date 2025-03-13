@@ -5,38 +5,71 @@ import LandingChart from "./LandingChart";
 import LandingNav from "../../components/LandingNav/LandingNav";
 import DataTable from "../../components/DataTable/DataTable";
 import upIcon from "../../assets/images/up.svg";
+import ExampleChart from "./ExampleChart";
 
 export default function LandingPage() {
-  let data = [
+  let dataIncomes = [
     {
       title: "Work",
       timeInterval: "Monthly",
       value: 1200,
     },
     {
-      title: "Work",
-      timeInterval: "Monthly",
-      value: 1200,
+      title: "Interest",
+      timeInterval: "Yearly",
+      value: 500,
     },
     {
-      title: "Work",
-      timeInterval: "Monthly",
-      value: 1200,
+      title: "Overtime Pay",
+      timeInterval: "One-time",
+      value: 100,
     },
     {
-      title: "Work",
-      timeInterval: "Monthly",
-      value: 1200,
+      title: "Bike Sale",
+      timeInterval: "One-time",
+      value: 35,
     },
     {
-      title: "Work",
-      timeInterval: "Monthly",
-      value: 1200,
+      title: "Tips",
+      timeInterval: "Weekdays",
+      value: 20,
     },
     {
-      title: "Work",
+      title: "Scholarship",
+      timeInterval: "Yearly",
+      value: 8000,
+    },
+  ];
+  let dataExpenses = [
+    {
+      title: "Taxes",
+      timeInterval: "Yearly",
+      value: 2000,
+    },
+    {
+      title: "Water Bill",
+      timeInterval: "Yearly",
+      value: 300,
+    },
+    {
+      title: "Groceries",
       timeInterval: "Monthly",
-      value: 1200,
+      value: 450,
+    },
+    {
+      title: "Gas",
+      timeInterval: "Daily",
+      value: 10,
+    },
+    {
+      title: "Date Night",
+      timeInterval: "Weekly",
+      value: 100,
+    },
+    {
+      title: "Phone Bill",
+      timeInterval: "Monthly",
+      value: 30,
     },
   ];
 
@@ -74,22 +107,25 @@ export default function LandingPage() {
         }}
       >
         <div className={styles.sectionLeft}>
-          <div className={styles.invertedTitle}>Incomes</div>
-          <div className={styles.incomesText}>
-            You can enter different income streams. Anything counts, your job, a
-            side gig, money from a birthday card from gandma, anything! Wallet
-            Watcher will keep track of these different incomes.
-            <br />
-            <br />
-            Incomes can see viewed in tables as shown on the right, but also as
-            graphical data which may better help you visualize your incomes over
-            time!
+          <div>
+            <div className={styles.invertedTitle}>Incomes</div>
+            <div className={styles.incomesText}>
+              You can enter different income streams. Anything counts, your job, a
+              side gig, money from a birthday card from gandma, anything! Wallet
+              Watcher will keep track of these different incomes.
+              <br />
+              <br />
+              Incomes can see viewed in tables as shown on the right, but also as
+              graphical data which may better help you visualize your incomes over
+              time!
+            </div>
           </div>
         </div>
 
         <div className={styles.sectionRight}>
-          <DataTable data={data} title={"Incomes"} />
+          <DataTable data={dataIncomes} title={"Incomes"} />
         </div>
+
       </div>
 
       {/** Section 3 */}
@@ -100,23 +136,27 @@ export default function LandingPage() {
         }}
       >
         <div className={styles.sectionLeft}>
-          <DataTable data={data} title={"Incomes"} />
+          <DataTable data={dataExpenses} title={"Expenses"} />
         </div>
 
         <div className={styles.sectionRight}>
-          <div className={styles.invertedTitle}>Incomes</div>
-          <div className={styles.incomesText}>
-            Just like incomes, your expenses can also be viewed in a table or
-            graph to visualize the data. Expenses can be anything from your
-            rent, car payments, student loans, food, electricity, or a $20 bet
-            you lost. 
 
-            <br />
-            <br />
+          <div>
+            <div className={styles.invertedTitle}>Expenses</div>
+            <div className={styles.incomesText}>
+              Just like incomes, your expenses can also be viewed in a table or
+              graph to visualize the data. Expenses can be anything from your
+              rent, car payments, student loans, food, electricity, or a $20 bet
+              you lost. 
 
-            Your expenses along with your incomes can come together to calculuate your net (how much you profited or lost in total). 
+              <br />
+              <br />
+
+              Your expenses along with your incomes can come together to calculuate your net (how much you profited or lost in total). 
+            </div>
           </div>
         </div>
+
       </div>
 
       {/** Section 4 */}
@@ -127,30 +167,38 @@ export default function LandingPage() {
         }}
       >
         <div className={styles.sectionLeft}>
-          <div className={styles.section4DroppingPanels}>
-            <div className={styles.dropPanel}>
-              <div>
-                <li>Hello</li>
-              </div>
-            </div>
-            <div className={styles.dropPanel}>
-              <div>
-                <li>Hello</li>
-              </div>
-            </div>
-            <div className={styles.dropPanel}>
-              <div>
-                <li>Hello</li>
+          <div>
+              <div className={styles.invertedTitle}>Budgetting</div>
+              <div className={styles.incomesText}>
+                Set goals and due dates for your incomes, expenses, or net worth in order to create your own inscentives to save up money. The money could be saved for a brand new car, a new house, or a big party.
+
+                <br />
+                <br />
+
+                Budgets can also be used to make sure you have enough money ready for you in the future. You never know when a disaster might strike. 
               </div>
             </div>
           </div>
-        </div>
 
         <div className={styles.sectionRight}>
-          <div className={styles.whiteBox}>
-            <h1>Content:</h1>
-            <p>Hello</p>
-          </div>
+            
+          <div className={styles.section4DroppingPanels}>
+              <div className={styles.dropPanel}>
+                <div>
+                  Placeholder, will include days till due, reason, & dollar amount
+                </div>
+              </div>
+              <div className={styles.dropPanel}>
+                <div>
+                  Placeholder
+                </div>
+              </div>
+              <div className={styles.dropPanel}>
+                <div>
+                  Placeholder
+                </div>
+              </div>
+            </div>
         </div>
       </div>
 
@@ -162,13 +210,24 @@ export default function LandingPage() {
         }}
       >
         <div className={styles.sectionLeft}>
-          <div className={styles.whiteBox}>
-            <h1>Content:</h1>
-            <p>Hello</p>
+          <div className={styles.exampleChartContainer}>
+            <ExampleChart></ExampleChart>
           </div>
         </div>
 
-        <div className={styles.sectionRight}>Hello</div>
+        <div className={styles.sectionRight}>
+          <div>
+              <div className={styles.invertedTitle}>Visualizing</div>
+              <div className={styles.incomesText}>
+                By having Wallet Watcher graph your data into a bar or line graph, you can more easily get an idea of what is happening to your net worth over time.
+                <br />
+                <br />
+
+                By more easily understanding what is happening with your money, you can then make plans ahead of time to more easily avoid any future issues.
+              </div>
+            </div>
+
+        </div>
       </div>
 
       <div className={styles.footerWrapper}>
