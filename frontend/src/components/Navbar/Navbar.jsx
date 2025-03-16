@@ -17,10 +17,10 @@ export default function Navbar(props) {
   const [image, setImage] = createSignal(sun);
 
   let notificationsContainer;
-  
+  let pfpName = "Temporary";
+  let pfpImage = profilePic;
 
   return (
-
     <nav className={styles.navbar} style={{"position": props.position}}>
       <div className={styles.navLeft}>
           <div className={styles.navTitleWrapper} onClick={() => routeTo("")}>
@@ -60,8 +60,8 @@ export default function Navbar(props) {
             
           </div>
 
-            <h2 className={styles.profileName}>Profile Name</h2>
-            <img className={styles.profilePic} src={profilePic} />
+            <h2 className={styles.profileName}>{pfpName}</h2>
+            <img className={styles.profilePic} src={pfpImage} />
         </Show>
         <img onclick={() => {
             let newImage = image() == sun ? moon : sun;

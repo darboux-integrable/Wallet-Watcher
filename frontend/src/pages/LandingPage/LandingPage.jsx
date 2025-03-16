@@ -6,14 +6,94 @@ import LandingNav from "../../components/LandingNav/LandingNav";
 import DataTable from "../../components/DataTable/DataTable";
 import upIcon from "../../assets/images/up.svg";
 import ExampleChart from "./ExampleChart";
-    import Budget from "../../components/Budget/Budget";
+import BudgetTable from "../../components/BudgetTable/BudgetTable"
 
 export default function LandingPage() {
+  let dataBudgets = [
+    {
+      title: "Groceries",
+      max: 250,
+      items: [
+        {
+          name: "milk",
+          cost: 5,
+          amount: 2
+        },
+        {
+          name: "Eggs",
+          cost: 12,
+          amount: 1
+        },
+        {
+          name: "Steak",
+          cost: 20,
+          amount: 3
+        },
+        {
+          name: "Soda",
+          cost: 10,
+          amount: 1
+        }
+      ]
+    },
+    {
+      title: "Birthday Party",
+      max: 300,
+      items: [
+        {
+          name: "Pizza",
+          cost: 15,
+          amount: 4
+        },
+        {
+          name: "Gift",
+          cost: 50,
+          amount: 3
+        },
+        {
+          name: "Steam Gift Card",
+          cost: 25,
+          amount: 1
+        },
+        {
+          name: "Trampoline Park",
+          cost: 200,
+          amount: 1
+        }
+      ]
+    },
+    {
+      title: "Wedding",
+      max: 25000,
+      items: [
+        {
+          name: "Cake",
+          cost: 5000,
+          amount: 1
+        },
+        {
+          name: "Priest",
+          cost: 700,
+          amount: 2
+        },
+        {
+          name: "Food Catering",
+          cost: 7500,
+          amount: 1
+        },
+        {
+          name: "Wedding Ring",
+          cost: 10000,
+          amount: 1
+        }
+      ]
+    }
+  ];
   let dataIncomes = [
     {
       title: "Work",
       timeInterval: "Monthly",
-      value: 1200,
+      value: 222200,
     },
     {
       title: "Interest",
@@ -182,12 +262,7 @@ export default function LandingPage() {
           </div>
 
         <div className={styles.sectionRight}>
-            
-          <div className={styles.section4DroppingPanels}>
-              <Budget title={"New Toyota 4Runner"} data={"$24,000 by 3/31"} />
-              <Budget title={"New House"} data={"$200,000 by 9/21"} />
-              <Budget title={"Birthday Party"} data={"$1,000 by 4/15"} />
-            </div>
+          <BudgetTable budgets={dataBudgets}/>
         </div>
       </div>
 

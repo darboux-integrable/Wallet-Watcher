@@ -13,7 +13,7 @@ export default function ExampleChart() {
                 datasets: [{
                     label: 'Financial Overview',
                     data: [5000, 1000, 4000],
-                    backgroundColor: ['#66C2A5', '#FC8D62', '#FFD92F']
+                    backgroundColor: ['#66C2A5', '#ff635e', '#FFD92F']
                 }]
             },
             options: {
@@ -29,13 +29,12 @@ export default function ExampleChart() {
                 }
             }
         });
-
     });
 
     return (
         <canvas 
             ref={canvasElem} 
-            width={600} 
+            width={800} 
             height={400} 
         />
     );

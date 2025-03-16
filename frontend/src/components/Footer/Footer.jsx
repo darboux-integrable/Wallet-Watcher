@@ -15,7 +15,7 @@ export default function Footer() {
 
                     <h1 className={styles.footerGitSeparator}>|</h1>
 
-                    <a className={styles.footerGitLink} href="https://github.com/SonicarMC">
+                    <a className={styles.footerGitLink} href="https://github.com/140767652">
                         <img className={styles.footerGitIcon} src={gitIcon}/>
                         <h1>Tyler R.</h1>
                     </a>

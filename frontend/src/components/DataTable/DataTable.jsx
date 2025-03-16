@@ -14,7 +14,7 @@ export default function DataTable({ title, data}){
                                 <h2 className={styles.dataTitle}>{dataPoint.title}</h2>
                             </div>
                             <div className={styles.bottomSection}>
-                                <h2 className={styles.dataValue} style={{"color": title === "Incomes" ? "green" : "red"}}>{title === "Incomes" ? "+" : "-"}${dataPoint.value}</h2>
+                                <h2 className={styles.dataValue} style={{"color": title === "Incomes" ? "#66C2A5" : "#ff635e"}}>{title === "Incomes" ? "+" : "-"}${dataPoint.value}</h2>
                                 <p className={styles.timeInterval}>{dataPoint.timeInterval}</p>
                                 </div>
                         </div>
