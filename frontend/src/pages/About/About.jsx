@@ -1,4 +1,4 @@
-import styles from "./AboutAndGuide.module.css"
+import styles from "./About.module.css"
 import Navbar from "../../components/Navbar/Navbar"
 import imageTyler from "../../assets/images/tylerpfp.jpg"
 import imageAdam from "../../assets/images/adampfp.webp"
@@ -21,22 +21,14 @@ export default function AboutAndGuide(props) {
                                 About
                             </button>
                             <button className={styles.notSelectedNav} onClick={() => routeTo("guide")}>
-                                Guide
+                                Other Works
                             </button>
                         </Show>
-                        <Show when={props.url == "guide"}>
-                            <button className={styles.notSelectedNav} onClick={() => routeTo("about")}>
-                                About
-                            </button>
-                            <button className={styles.selectedNav}>
-                                Guide
-                            </button>
-                        </Show>
+                       
                     </div>
 
 
                     <div className={styles.contentWrapper}>
-                        <Show when={props.url == "about"}>
                             <div>
                                 <h1 className={styles.contentTitle}>
                                     About:
@@ -71,36 +63,8 @@ export default function AboutAndGuide(props) {
                                     Wallet Watcher is a project for the 1st quarter of our Intern Computer Science / Business class. This sspecific instance of the project is a remake of the original project to write cleaner code, and to improve the design.
                                 </p>
                             </div>
-                        </Show>
 
-                        <Show when={props.url == "guide"}>
-                        <div>
-                                <h1 className={styles.contentTitle}>
-                                    Quickstart Guide:
-                                </h1>
-                                <ol>
-                                    <li>Login or Sign-up
-                                        
-                                        <h1>P</h1>
-                                    </li>
-                                    <li>Create incomes
-                                        
-                                        <h1>P</h1>
-                                    </li>
-                                    <li>Create expenses
-                                        
-                                        <h1>P</h1>
-                                    </li>
-                                    <li>Track your balance
-                                        
-                                        <h1>P</h1>
-                                    </li>
-                                </ol>
-                                
-
-                            </div>
-                        </Show>
-
+                        
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
   min-height: 300px;
   height: 100%;
   box-shadow: 0px 0px 10px 5px var(--shadow-color-1);
-  border: 2px solid #ddd;
+  border: 2px solid var(--gray-1);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -14,14 +14,14 @@
     flex-direction: column;
     justify-content: space-between;
     min-width: 200px;
-    border-right: 2px solid #ddd;
+    border-right: 2px solid var(--gray-1);
 }
 
 .tableTitle, .budgetTitle{
     text-align: center;
     margin: 0;
     font-family: var(--title-font-1);
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid var(--gray-1);
 }
 
 .budgetTitle{
@@ -42,7 +42,7 @@
 }
 
 .smallBudgetComponent:hover{
-    background-color: #ddd;
+    background-color: var(--gray-1);
 }
 
 .budgetButtonTitle{
@@ -72,7 +72,7 @@
     width: 100%;
     background-color: var(--background-color-2);
     border: none;
-    border-top: 2px solid #ddd;
+    border-top: 2px solid var(--gray-1);
     height: 45px;
     color: white;
     font-size: 1.5rem;
@@ -112,7 +112,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid var(--gray-1);
 }
 
 .addItemButton{
@@ -129,7 +129,7 @@
 }
 
 .addItemButton:hover{
-    border-color: #ddd;
+    border-color: var(--gray-1);
     color: var(--background-color-2);
     background-color: white;
 }
@@ -148,7 +148,7 @@
 }
 
 .selectedItemTopSection{
-    border-bottom: 2px #ddd solid;
+    border-bottom: 2px var(--gray-1) solid;
     display: flex;
     align-items: center;
     padding-bottom: 5px;

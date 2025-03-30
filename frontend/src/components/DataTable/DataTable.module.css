@@ -35,7 +35,7 @@
     min-width: fit-content;
     padding-inline: 10px;
     padding-top: 10px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid var(--gray-1);
 }
 
 .bottomSection {

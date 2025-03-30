@@ -1,5 +1,6 @@
 import styles from "./LoginAndSignUp.module.css";
 import { createSignal, Show } from "solid-js";
+import { useNavigate } from "@solidjs/router";
 import Input from "../../components/Input/Input";
 import { checkFilled } from "../../helpers/checkFilled.js";
 import Navbar from "../../components/Navbar/Navbar";
@@ -13,6 +14,8 @@ export default function LoginAndSignUp({ pageType, setUser }) {
 
   const [error, setError] = createSignal("");
 
+  const navigate = useNavigate();
+
   const signUpUser = async () => {
     if (
       !checkFilled(firstName(), lastName(), username(), email(), password())
@@ -22,6 +25,7 @@ export default function LoginAndSignUp({ pageType, setUser }) {
     }
 
     // Adam's code is shit
+    // Let me see u do it then
     const signInFetch = await fetch(`http://127.0.0.1:5000/users/`, {
       method: "POST",
       headers: {
@@ -40,6 +44,7 @@ export default function LoginAndSignUp({ pageType, setUser }) {
 
     if (signInFetch.ok) {
       setUser(userData);
+      navigate("/hub", {"replace": true})
     } else {
       setError(userData.detail);
     }
@@ -61,6 +66,7 @@ export default function LoginAndSignUp({ pageType, setUser }) {
 
     if (userFetch.ok) {
       setUser(userData);
+      navigate("/hub", {"replace": true})
     } else {
       setError(userData.detail);
     }
@@ -128,7 +134,7 @@ export default function LoginAndSignUp({ pageType, setUser }) {
               className={styles.togglePageButton}
               onclick={() => {
                 const otherPage = pageType == "signup" ? "login" : "signup";
-                location.replace(`/${otherPage}`);
+                navigate(`/${otherPage}`, {"replace": true})
               }}
             >
               {pageType == "signup" ? "Login" : "Sign Up"}
